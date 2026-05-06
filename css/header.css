@@ -1,0 +1,36 @@
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--color-light);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-dark);
+}
+
+header nav {
+    display: flex;
+    gap: 2rem; /* Khoảng cách giữa các thẻ a */
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Làm mượt hiệu ứng hover */
+}
+
+
+header nav a:hover {
+    color: var(--color-primary);
+}
