@@ -6,17 +6,26 @@
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
     <title>My Portfolio</title>
 </head>
 <body>
     <header> 
         <div class="logo">Vu Xuan Duy</div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburger">☰</label> <!-- Ký tự ☰ là icon 3 gạch -->
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
     </header>
+    <section class="hero">
+        <h1>Hi, I'm <span class="highlight">Duy</span></h1>
+        <p>Full-Stack Developer | UI Designer | Problem Solver</p>
+        <a href="#portfolio" class="cta-button">View My Work</a>
+    </section>
 </body>
 </html>
