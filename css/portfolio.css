@@ -100,3 +100,48 @@
 .portfolio-item:hover .portfolio-overlay {
     opacity: 1;
 }
+
+
+/* --- Hộp Lightbox Phóng To --- */
+.lightbox {
+    position: fixed; /* Ghim chặt vào màn hình */
+    inset: 0;
+    background: rgba(0,0,0,0.95); /* Màn hình tối đen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Ẩn mặc định */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 2000; /* Đảm bảo nổi lên trên cùng của trang web */
+}
+
+/* THE MAGIC: Thuộc tính :target */
+/* Nếu URL trình duyệt có chứa #lightbox-1 (do vừa click vào thẻ a), thì hộp này sẽ hiện lên */
+.lightbox:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: var(--color-primary);
+}
