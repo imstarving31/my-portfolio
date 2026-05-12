@@ -342,3 +342,69 @@
     color: rgba(255, 255, 255, 0.65);
     font-size: 0.95rem;
 }
+
+@media (min-width: 769px) {
+    .footer-logo {
+        justify-self: start;
+        text-align: left;
+    }
+
+    .footer-tagline {
+        justify-self: center;
+    }
+
+    .social-links {
+        justify-self: end;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-info {
+        padding: 0;
+    }
+
+    .contact-info p {
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-logo,
+    .footer-tagline,
+    .social-links {
+        justify-self: center;
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title,
+    .contact-info h3 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .footer {
+        padding-top: 2.5rem;
+    }
+}
