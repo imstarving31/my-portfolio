@@ -71,6 +71,6 @@
 /* --- Responsive cho Mobile --- */
 @media (max-width: 768px) {
     .skills-grid {
-        grid-template-columns: 1fr; /* Xuống 1 cột trên điện thoại */
+        grid-template-columns: 1fr; 
     }
 }
