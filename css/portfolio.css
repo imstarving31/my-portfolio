@@ -1,0 +1,58 @@
+.portfolio-section {
+    padding: 5rem 1rem;
+    background-color: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 2rem;
+}
+
+/* --- Khung Nút Bấm --- */
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* --- Khung Lưới Chứa Ảnh --- */
+.portfolio-grid {
+    display: grid;
+    /* Tự động chia cột: nhỏ nhất 300px, lớn thì lấp đầy khoảng trống */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.portfolio-item {
+    border-radius: 12px;
+    /* Quan trọng: Cắt bỏ những phần ảnh lồi ra ngoài viền bo tròn */
+    overflow: hidden; 
+}
+
+.portfolio-item img {
+    width: 100%;
+    aspect-ratio: 4/3; /* Ép tỷ lệ ảnh là 4:3 (ngang 4, cao 3) */
+    object-fit: cover;
+    display: block;
+}
