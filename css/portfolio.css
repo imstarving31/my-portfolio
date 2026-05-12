@@ -56,3 +56,47 @@
     object-fit: cover;
     display: block;
 }
+/* --- Cài đặt Mỏ neo cho Hover --- */
+.portfolio-item {
+    position: relative; /* Làm mỏ neo để lớp overlay bám vào */
+}
+
+/* Chuẩn bị hiệu ứng cho ảnh */
+.portfolio-item img {
+    transition: transform 0.4s ease;
+}
+
+/* KHI HOVER: Phóng to ảnh lên 1.1 lần */
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+/* --- Thiết kế Lớp Phủ (Overlay) --- */
+.portfolio-overlay {
+    position: absolute; /* Phủ lên trên bức ảnh */
+    inset: 0; /* Ép chặt vào 4 mép của phần tử cha */
+    /* Dải màu đen mờ dần từ dưới lên trên */
+    background: linear-gradient(to top, rgba(30, 41, 59, 0.95) 0%, rgba(30, 41, 59, 0.6) 50%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Đẩy chữ xuống đáy */
+    padding: 1.5rem;
+    opacity: 0; /* Trạng thái bình thường: Ẩn đi hoàn toàn */
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-overlay h3 {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-overlay p {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* KHI HOVER: Hiển thị lớp phủ ra */
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
